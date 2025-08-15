@@ -43,9 +43,9 @@ Print: `Task succesfully added to task sheet.`
 
 --------    
 ## Contributors
-- Student 1: Pates
+- Student 1: Pates (input tasks, creation of decisions, readme)
 
-- Student 2: Maribao
+- Student 2: Maribao (readme)
 
-- Student 3: Rosal
+- Student 3: Rosal (none)
 .
