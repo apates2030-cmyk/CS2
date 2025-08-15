@@ -23,7 +23,7 @@ The project can:
 (Start Program)
 
 (Empty Task Sheet)
---------------------
+
 Decision
 
 1. Add Task
@@ -33,7 +33,7 @@ Decision
 3. View
 
 4. End
--------------------------
+
 Input number: 1
 
 Input Task: Computer Science Quarter Project
