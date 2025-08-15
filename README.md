@@ -30,8 +30,7 @@ The project can:
 2. View Tasks
 3. Mark a Task as Complete
 4. End
-        |
-        v
+        
 |
 > If choice 1 -> [Input the Task Description] -> [Add to the Task List] -> Back to "Decision"
 ---
