@@ -22,9 +22,11 @@ The project can:
 (Start the Program)
         |
         v
+---
 [Empty Task List]
         |
         v
+---
 "Decision":
 1. Add a Task
 2. View Tasks
