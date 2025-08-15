@@ -53,6 +53,7 @@ The project can:
 2. View Tasks
 3. Mark a Task as Complete
 4. End
+   ----------
 Input number: 1
 Add task: Computer Science Project
 Print: `Task succesfully added to Task List.`
