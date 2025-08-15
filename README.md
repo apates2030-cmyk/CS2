@@ -2,14 +2,15 @@
 ---
 ## Overview/Description
 A task organizer that helps students track their homework or assignments for the day.
----
+
 
 ## Features
+
 The project can:
 -Add tasks
 -View tasks
 -Mark tasks as completed
----
+
 
 ## How to Run the Program
 1. Have Python installed.
