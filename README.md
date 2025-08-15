@@ -34,10 +34,13 @@ The project can:
         v
 |
 > If choice 1 -> [Input the Task Description] -> [Add to the Task List] -> Back to "Decision"
+---
 |
 > If choice 2 -> [Print Tasks on the List] -> Back to "Decision"
+---
 |
 > If choice 3 -> [Input the Task Number] -> [Mark as Complete] -> Back to "Decision"
+---
 |
 > If choice 4 -> (End Program)
 
