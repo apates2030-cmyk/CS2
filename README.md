@@ -25,14 +25,15 @@ The project can:
 -------------------
        ↓
 [Empty Task List]
-         ↓
-------------------
+-------------------
+       ↓
 "Decision":
 1. Add a Task
 2. View Tasks
 3. Mark a Task as Complete
 4. End
-------------------        
+-------------------
+       ↓     
 |
 > If choice 1 -> [Input the Task Description] -> [Add to the Task List] -> Back to "Decision"
 ---
