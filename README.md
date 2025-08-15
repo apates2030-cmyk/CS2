@@ -63,3 +63,4 @@ Print: `Task succesfully added to task sheet.`
 - Student 1: Pates
 - Student 2: Maribao
 - Student 3: Rosal
+.
