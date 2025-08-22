@@ -1,0 +1,31 @@
+tasks = []
+
+def add_task():
+    tasks.append(input("Task: "))
+
+def view_tasks():
+    for i, t in enumerate(tasks, 1):
+        print(f"{i}. {t}")
+
+def complete_task():
+    number = int(input("Task number you want to mark as complete: ")) - 1
+    if 0 <= number < len(tasks):
+        tasks.pop(number)
+
+def main():
+    while True:
+        print("\n1. Add  2. View  3. Done  4. Exit")
+        choice = input("Pick one of the decisions: ").strip()
+        if choice == "1":
+            add_task()
+        elif choice == "2":
+            view_tasks()
+        elif choice == "3":
+            complete_task()
+        elif choice == "4":
+            break
+        else:
+            print("Only pick from numbers 1-4, please.")
+
+if __name__ == "__main__":
+    main()
