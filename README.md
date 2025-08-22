@@ -37,7 +37,7 @@ Decision
 
 Input number: 1
 
-Input Task: Computer Science Quarter Project
+Input Task: `Computer Science Quarter Project`
 
 Print: `Task succesfully added to task sheet.`
 
