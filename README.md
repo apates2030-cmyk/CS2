@@ -43,4 +43,6 @@ Print: `Computer Science Quarter Project added!`
 
 --------    
 ## Contributor
-- Student 1: Pates (input tasks, creation of decisions, readme)
+- Student 1: Pates (readme, code)
+- Student 2: Maribao ()
+- Student 3: Rosal ()
