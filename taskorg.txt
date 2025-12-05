@@ -2,6 +2,7 @@ tasks = []
 
 def add_task():
     tasks.append(input("Task: "))
+    print(f'"{task} added!")
 
 def view_tasks():
     for i, t in enumerate(tasks, 1):
