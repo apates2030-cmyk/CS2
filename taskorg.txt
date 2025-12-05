@@ -1,12 +1,14 @@
 tasks = []
 
 def add_task():
-    tasks.append(input("Task: "))
-    print(f'"{task} added!")
+    task = (input("Task: "))
+    tasks.append(task)
+    print(f"{task} added!")
 
 def view_tasks():
     for i, t in enumerate(tasks, 1):
         print(f"{i}. {t}")
+    return ""
 
 def complete_task():
     number = int(input("Task number you want to mark as complete: ")) - 1
@@ -15,7 +17,7 @@ def complete_task():
 
 def main():
     while True:
-        print("\n1. Add  2. View  3. Done  4. Exit")
+        print("\n1. Add  2. View  3. Complete  4. Exit")
         choice = input("Pick one of the decisions: ").strip()
         if choice == "1":
             add_task()
