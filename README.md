@@ -1,4 +1,4 @@
-# Project Title Task Organizer for Academics
+# Task Organizer for 
 ---
 ## Overview/Description
 A task organizer that helps students track their homework or assignments for the day.
@@ -39,13 +39,8 @@ Input number: 1
 
 Input Task: `Computer Science Quarter Project`
 
-Print: `Task succesfully added to task sheet.`
+Print: `Computer Science Quarter Project added!`
 
 --------    
-## Contributors
+## Contributor
 - Student 1: Pates (input tasks, creation of decisions, readme)
-
-- Student 2: Maribao (readme)
-
-- Student 3: Rosal (none)
-.
