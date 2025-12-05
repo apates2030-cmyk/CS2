@@ -1,4 +1,4 @@
-# Task Organizer for 
+# General Task Organizer
 ---
 ## Overview/Description
 A task organizer that helps students track their homework or assignments for the day.
