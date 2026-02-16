@@ -14,6 +14,10 @@ def complete_task():
     number = int(input("Task number you want to mark as complete: ")) - 1
     if 0 <= number < len(tasks):
         tasks.pop(number)
+    else:
+            print("Invalid task number.")
+    except ValueError:
+        print("Please enter a valid number.")
 
 def main():
     while True:
