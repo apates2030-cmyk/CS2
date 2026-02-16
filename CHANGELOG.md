@@ -2,6 +2,10 @@
 
 This file lists all the updates made to the Task Organizer.
 ---
+## Version 1.1.5 February 16, 2026
+- Fixed a slight bug in the complete task function.
+- Formatting is fixed.
+
 ## Version 1.1.4 February 16, 2026
 - Added something that disables users from entering numbers in the complete task function.
 
