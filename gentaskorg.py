@@ -11,7 +11,8 @@ def view_tasks():
     return ""
 
 def complete_task():
-    number = int(input("Task number you want to mark as complete: ")) - 1
+    try:
+       number = int(input("Task number you want to mark as complete: ")) - 1
     if 0 <= number < len(tasks):
         tasks.pop(number)
     else:
