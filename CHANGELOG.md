@@ -2,6 +2,9 @@
 
 This file lists all the updates made to the Task Organizer.
 ---
+## Version 1.1.4 February 16, 2026
+- Added something that disables users from entering numbers in the complete task function.
+
 ## Version 1.1.3 December 5, 2025
 - Identified an issue causing the code to print "None" instead of the name of the task and fixed it.
 - Polished the code.
