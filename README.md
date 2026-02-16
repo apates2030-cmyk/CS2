@@ -11,6 +11,14 @@ The project can:
 -View tasks
 -Mark tasks as completed
 
+## Methodology
+Tasks are stored in an already made array. To add tasks, `append()` is used. To complete them, it removes tasks using `pop()`. To view, it uses `enumerate().` A `while True` loop keeps the organizer working.
+
+## Technologies Used
+We used Python, so that it could easily be read and understood by a wide range of our audience. We also used it for its simplicity.
+
+## Ethical Considerations
+It follows principles from the Association for Computing Machinery and its ACM Code of Ethics and Professional Conduct regarding privacy and honesty in programming since it doesn't steal any data. Our organizer does not use any external libraries.
 
 ## How to Run the Program
 1. Have Python installed.
