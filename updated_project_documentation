@@ -1,0 +1,78 @@
+1. Updated Project Documentation
+
+Feature Updates:
+• Adds tasks to a list with user input
+• Displays all current tasks with numbering
+• Marks tasks as complete and removes them from the list
+• Input validation for menu selection (1–4)
+
+File/Function Structure:
+• add_task() – adds a new task to the list
+• view_tasks() – shows all tasks with numbering
+• complete_task() – removes a task by its number
+• main() – handles menu, user input, and program flow
+
+New Technologies / Tools:
+• Python 3 – for coding the task manager
+• GitHub – version control and repository management
+• Markdown – for README file documentation
+
+References (APA-style):
+• ACM Code of Ethics and Professional Conduct. (2018). Association for Computing Machinery. https://www.acm.org/code-of-ethics
+
+⸻
+
+2. Detailed Methodology
+
+Core Features Implementation:
+• add_task() appends the user-inputted task to the tasks list
+• view_tasks() enumerates and prints each task with a number
+• complete_task() removes the selected task after validating its index
+• main() loops the menu, processes choices, and validates input
+
+Technologies Used & Justification:
+• Python: simple, readable, and easy to run locally
+• GitHub: tracks changes and allows version control
+• Markdown/README: explains project installation, usage, and features
+
+Backend–Frontend Communication:
+• Not applicable – the project is console-based
+
+Design Decisions / Trade-offs:
+• Console interface chosen for simplicity
+• Modular functions improve readability and maintainability
+• Prioritized ease of use over advanced features
+
+Ethical Considerations:
+• User privacy: program runs locally, does not store personal data
+• Accessibility: numbered menu and clear prompts
+• Intellectual property: all references cited, no uncredited code used
+
+⸻
+
+3. Annotated GitHub Repository
+
+Organization:
+• Python file in root directory
+• Documentation file (this Word document) included in root directory
+• README.md provides instructions and overview
+
+Commit Practices:
+• Descriptive commits, e.g.,
+• “Added add_task, view_tasks, complete_task functions”
+• “Implemented menu input validation and main loop”
+
+Branch Usage:
+• Main branch used for all development
+• Optional feature branches may be used for experiments
+
+README Updates:
+• Includes project description, installation instructions, usage, features, and progress
+
+⸻
+
+4. Programming and Computing Ethics Reflection
+• Respect for intellectual property: all references cited
+• User privacy: no data is collected or stored
+• Accessibility: clear, readable prompts and output
+• Open-source code credit: ACM Code of Ethics followed
