@@ -2,24 +2,29 @@ tasks = []
 
 def add_task():
     task = (input("Task: "))
+    
+    if task.strip() == "":
+        print("Enter a valid task.")
+        return
+    
     tasks.append(task)
     print(f"{task} added!")
-    if task == "":
-        print("Enter a valid task")
+
 
 def view_tasks():
     for i, t in enumerate(tasks, 1):
         print(f"{i}. {t}")
-    return ""
 
 def complete_task():
     try:
        number = int(input("Task number you want to mark as complete: ")) - 1
-    if 0 <= number < len(tasks):
-       removed = tasks.pop(number)
-       print(f"{removed} is completed!")
-    else:
+       
+       if 0 <= number < len(tasks):
+         removed = tasks.pop(number)
+         print(f"{removed} is completed!")
+       else:
             print("Invalid task number.")
+    
     except ValueError:
         print("Please enter a valid number.")
 
