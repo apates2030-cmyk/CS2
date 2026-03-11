@@ -4,6 +4,8 @@ def add_task():
     task = (input("Task: "))
     tasks.append(task)
     print(f"{task} added!")
+    if task == "":
+        print("Enter a valid task")
 
 def view_tasks():
     for i, t in enumerate(tasks, 1):
