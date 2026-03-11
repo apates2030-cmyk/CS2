@@ -2,6 +2,10 @@
 
 This file lists all the updates made to the Task Organizer.
 ---
+## Version 1.1.6 March 11, 2026
+- "add_task" does not accept any empty inputs.
+- Fixed indent at the "complete_task"
+
 ## Version 1.1.5 February 16, 2026
 - Fixed a slight bug in the complete task function.
 - Formatting is fixed.
