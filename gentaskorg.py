@@ -6,8 +6,15 @@ def add_task():
     if task.strip() == "":
         print("Enter a valid task.")
         return
-    
-    tasks.append(task)
+       
+    priority = input("Priority (High/Medium/Low): ")
+    due = input("Due date: ")
+
+    tasks.append({
+        "task": task,
+        "priority": priority,
+        "due": due
+    })
     print(f"{task} added!")
 
 
