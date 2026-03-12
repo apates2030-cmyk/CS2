@@ -2,7 +2,11 @@
 
 This file lists all the updates made to the Task Organizer.
 ---
-## Version 1.2.6 March 12, 2026
+
+## Version 1.3.0 March 12, 2026
+- Permanent file storage via json
+
+## Version 1.2.0 March 12, 2026
 - Added due dates & priority levels.
 
 ## Version 1.1.6 March 11, 2026
