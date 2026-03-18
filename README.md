@@ -50,23 +50,27 @@ It follows principles from the Association for Computing Machinery and its ACM C
 ---
 
 ## Example Output
-(Start Program)
+> (Start Program)
 
-(Empty Task Sheet)
+> (Empty Task Sheet)
 
-Decision
+----- TASK ORGANIZER -----
 
 1. Add Task
 
 2. Mark Task as Complete
 
-3. View
+3. View Tasks
 
-4. End
+4. Exit
 
 Input number: 1
 
 Input Task: `Computer Science Quarter Project`
+
+Input priority: `High`
+
+Input due date: `Tonight`
 
 Print: `Computer Science Quarter Project added!`
 
