@@ -7,12 +7,31 @@ A task organizer that helps students track their homework or assignments for the
 ## Features
 
 The project can:
--Add tasks
--View tasks
--Mark tasks as completed
+✔ Add tasks
+✔ View tasks
+✔ Mark tasks as completed
 
 ## Methodology
-Tasks are stored in an already made array. To add tasks, `append()` is used. To complete them, it removes tasks using `pop()`. To view, it uses `enumerate().` A `while True` loop keeps the organizer working.
+Tasks are stored in an already made array. To add tasks, `append()` is used.
+	<ins>ex.</ins>
+>     tasks.append({
+        "task": task,
+        "priority": priority,
+        "due": due
+    })
+To complete them, it removes tasks using `pop()`.
+	<ins>ex.</ins>
+> def complete_task():
+    try:
+        number = int(input("Task number you want to mark as complete: ")) - 1
+
+        if 0 <= number < len(tasks):
+            removed = tasks.pop(number)
+To view, it uses `enumerate().` 
+<ins>ex.</ins>
+> for i, t in enumerate(tasks, 1):
+
+A `while True` loop keeps the organizer working.
 
 ## Technologies Used
 We used Python, so that it could easily be read and understood by a wide range of our audience. We also used it for its simplicity.
