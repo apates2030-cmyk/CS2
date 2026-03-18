@@ -27,8 +27,10 @@ To complete them, it removes tasks using `pop()`.
 
         if 0 <= number < len(tasks):
             removed = tasks.pop(number)
+			
 To view, it uses `enumerate().` 
 <ins>ex.</ins>
+
 > for i, t in enumerate(tasks, 1):
 
 A `while True` loop keeps the organizer working.
