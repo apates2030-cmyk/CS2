@@ -7,9 +7,9 @@ A task organizer that helps students track their homework or assignments for the
 ## Features
 
 The project can:
-✔ Add tasks
-✔ View tasks
-✔ Mark tasks as completed
+1. Add tasks
+2. View tasks
+3. Mark tasks as completed
 
 ## Methodology
 Tasks are stored in an already made array. To add tasks, `append()` is used.
