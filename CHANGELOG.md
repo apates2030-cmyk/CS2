@@ -3,6 +3,9 @@
 This file lists all the updates made to the Task Organizer.
 ---
 
+## Version 2.3.0 March 25, 2026
+- Added a GUI using Tkinter
+
 ## Version 1.3.0 March 12, 2026
 - Permanent file storage via json
 
