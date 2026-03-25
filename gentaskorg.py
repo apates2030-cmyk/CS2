@@ -49,7 +49,7 @@ def complete():
     save_tasks()
     refresh()
 
-# ---------- GUI ----------
+# gui
 root = tk.Tk()
 root.title("General Task Organizer")
 root.geometry("500x550")
