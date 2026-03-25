@@ -1,89 +1,74 @@
+import tkinter as tk
+from tkinter import messagebox
 import json
 
 tasks = []
 
+# loading and saving
 def load_tasks():
     global tasks
     try:
-        with open("tasks.json", "r") as file:
-            tasks = json.load(file)
+        with open("tasks.json", "r") as f:
+            tasks = json.load(f)
     except:
         tasks = []
 
 def save_tasks():
-    with open("tasks.json", "w") as file:
-        json.dump(tasks, file)
+    with open("tasks.json", "w") as f:
+        json.dump(tasks, f)
 
+# adding & priority 
+def refresh():
+    listbox.delete(0, tk.END)
+    for t in tasks:
+        listbox.insert(tk.END, f"{t['task']} ({t['priority']})")
 
-def add_task():
-    task = input("Task: ").strip()
+def add():
+    task = entry.get().strip()
+    priority = priority_var.get()
 
-    if task == "":
-        print("Enter a valid task.")
+    if not task:
+        messagebox.showwarning("Type a task first :)")
         return
 
-    priority = input("Priority (High/Medium/Low): ")
-    due = input("Due date: ")
-
-    tasks.append({
-        "task": task,
-        "priority": priority,
-        "due": due
-    })
-
-    print(f"{task} added!")
+    tasks.append({"task": task, "priority": priority})
     save_tasks()
+    refresh()
+    entry.delete(0, tk.END)
 
+def complete():
+    selected = listbox.curselection()
 
-def view_tasks():
-    if not tasks:
-        print("No tasks yet!")
+    if not selected:
+        messagebox.showwarning("Select a task first :)")
         return
 
-    for i, t in enumerate(tasks, 1):
-        print(f"{i}. {t['task']} | Priority: {t['priority']} | Due: {t['due']}")
+    index = selected[0]
+    tasks.pop(index)
 
+    save_tasks()
+    refresh()
 
-def complete_task():
-    try:
-        number = int(input("Task number you want to mark as complete: ")) - 1
+# ---------- GUI ----------
+root = tk.Tk()
+root.title("General Task Organizer")
+root.geometry("500x550")
 
-        if 0 <= number < len(tasks):
-            removed = tasks.pop(number)
-            print(f"{removed['task']} is completed!")
-            save_tasks()
-        else:
-            print("Invalid task number.")
+entry = tk.Entry(root)
+entry.pack(pady=10)
 
-    except ValueError:
-        print("Please enter a valid number.")
+priority_var = tk.StringVar(value="Medium")
+tk.OptionMenu(root, priority_var, "High", "Medium", "Low").pack()
 
+tk.Button(root, text="Add Task", command=add).pack(pady=5)
+tk.Button(root, text="Complete Task", command=complete).pack(pady=5)
+tk.Button(root, text="Exit", command=root.quit).pack(pady=5)
 
-def main():
-    load_tasks()
+listbox = tk.Listbox(root)
+listbox.pack(fill="both", expand=True, pady=10)
 
-    while True:
-        print("\n---- TASK ORGANIZER ----")
-        print("1. Add Task")
-        print("2. View Tasks")
-        print("3. Complete Task")
-        print("4. Exit")
-        print("---------------------------")
+# program
+load_tasks()
+refresh()
 
-        choice = input("Pick an option: ").strip()
-
-        if choice == "1":
-            add_task()
-        elif choice == "2":
-            view_tasks()
-        elif choice == "3":
-            complete_task()
-        elif choice == "4":
-            save_tasks()
-            break
-        else:
-            print("Only pick from numbers 1–4 :)")
-
-
-if __name__ == "__main__":
-    main()
+root.mainloop()
