@@ -28,7 +28,7 @@ def add():
     priority = priority_var.get()
 
     if not task:
-        messagebox.showwarning("Type a task first :)")
+        messagebox.showwarning("Error", "Type a task first :)")
         return
 
     tasks.append({"task": task, "priority": priority})
@@ -40,7 +40,7 @@ def complete():
     selected = listbox.curselection()
 
     if not selected:
-        messagebox.showwarning("Select a task first :)")
+        messagebox.showwarning("Error", "Select a task first :)")
         return
 
     index = selected[0]
