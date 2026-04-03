@@ -23,7 +23,7 @@ def refresh():
     for t in tasks:
         listbox.insert(tk.END, f"{t['task']} ({t['priority']})")
 
-def add():
+def add_tasks():
     task = entry.get().strip()
     priority = priority_var.get()
 
@@ -36,7 +36,7 @@ def add():
     refresh()
     entry.delete(0, tk.END)
 
-def complete():
+def complete_tasks():
     selected = listbox.curselection()
 
     if not selected:
