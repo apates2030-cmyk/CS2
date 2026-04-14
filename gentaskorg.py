@@ -4,7 +4,8 @@ import json
 
 tasks = []
 
-# loading and saving
+# program
+
 def load_tasks():
     global tasks
     try:
@@ -17,7 +18,6 @@ def save_tasks():
     with open("tasks.json", "w") as f:
         json.dump(tasks, f)
 
-# adding & priority 
 def refresh():
     listbox.delete(0, tk.END)
     for t in tasks:
@@ -26,11 +26,9 @@ def refresh():
 def add():
     task = entry.get().strip()
     priority = priority_var.get()
-
     if not task:
         messagebox.showwarning("Error", "Type a task first :)")
         return
-
     tasks.append({"task": task, "priority": priority})
     save_tasks()
     refresh()
@@ -38,37 +36,95 @@ def add():
 
 def complete():
     selected = listbox.curselection()
-
     if not selected:
         messagebox.showwarning("Error", "Select a task first :)")
         return
-
     index = selected[0]
     tasks.pop(index)
-
     save_tasks()
     refresh()
 
 # gui
 root = tk.Tk()
 root.title("General Task Organizer")
-root.geometry("500x550")
+root.geometry("500x400")
+root.configure(bg="#E4E2D2")
 
-entry = tk.Entry(root)
-entry.pack(pady=10)
+
+left_frame = tk.Frame(root, bg="#EBBF87")
+left_frame.grid(row=0, column=0, padx=20, pady=20, sticky="n")
+
+
+right_frame = tk.Frame(root, bg="#936046")
+right_frame.grid(row=0, column=1, padx=20, pady=20, sticky="nsew")
+
+
+tk.Label(left_frame, text="TASK NAME:",
+         bg="#EBBF87", fg="#5a3e2b",
+         font=("Helvetica", 9, "bold")).grid(row=0, column=0, sticky="w")
+
+entry = tk.Entry(left_frame,
+                 bg="#E4E2D2",
+                 fg="#5a3e2b",
+                 insertbackground="#5a3e2b")
+entry.grid(row=0, column=1, pady=5)
+
+
+tk.Label(left_frame, text="PRIORITY:",
+         bg="#EBBF87", fg="#5a3e2b",
+         font=("Helvetica", 9, "bold")).grid(row=1, column=0, sticky="w")
 
 priority_var = tk.StringVar(value="Medium")
-tk.OptionMenu(root, priority_var, "High", "Medium", "Low").pack()
 
-tk.Button(root, text="Add Task", command=add).pack(pady=5)
-tk.Button(root, text="Complete Task", command=complete).pack(pady=5)
-tk.Button(root, text="Exit", command=root.quit).pack(pady=5)
+priority_menu = tk.OptionMenu(left_frame, priority_var, "High", "Medium", "Low")
+priority_menu.config(bg="#9A4C41",
+                     fg="#E4E2D2",
+                     activebackground="#7f3b32",
+                     activeforeground="#E4E2D2",
+                     font=("Helvetica", 10, "bold"),
+                     highlightthickness=0)
 
-listbox = tk.Listbox(root)
-listbox.pack(fill="both", expand=True, pady=10)
+priority_menu.grid(row=1, column=1, pady=5, sticky="ew")
 
-# program
+btn_style = {"width": 15, "pady": 5}
+tk.Button(left_frame, text="ADD",
+          bg="#936046",
+          fg="#E4E2D2",
+          activebackground="#7a4f38",
+          activeforeground="#E4E2D2",
+          width=15, pady=5).grid(row=2, column=0, columnspan=2, pady=10)
+
+tk.Button(left_frame, text="REFRESH",
+          bg="#936046",
+          fg="#E4E2D2",
+          activebackground="#7a4f38",
+          activeforeground="#E4E2D2",
+          width=15, pady=5).grid(row=3, column=0, columnspan=2, pady=5)
+
+tk.Button(left_frame, text="COMPLETE",
+          bg="#936046",
+          fg="#E4E2D2",
+          activebackground="#7a4f38",
+          activeforeground="#E4E2D2",
+          width=15, pady=5).grid(row=4, column=0, columnspan=2, pady=5)
+
+tk.Button(left_frame, text="EXIT",
+          command=root.quit,
+          bg="#9A4C41",
+          fg="#E4E2D2",
+          activebackground="#7f3b32",
+          activeforeground="#E4E2D2",
+          width=10).grid(row=6, column=0, columnspan=2, pady=30)
+listbox = tk.Listbox(right_frame, width=30, height=15)
+listbox.pack(side="left", fill="both")
+
+scrollbar = tk.Scrollbar(right_frame)
+scrollbar.pack(side="right", fill="y")
+listbox.config(yscrollcommand=scrollbar.set)
+scrollbar.config(command=listbox.yview)
+
+root.grid_columnconfigure(1, weight=1)
+
 load_tasks()
 refresh()
-
 root.mainloop()
