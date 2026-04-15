@@ -2,7 +2,9 @@
 
 This file lists all the updates made to the Task Organizer.
 ---
-
+## Version 2.4.0 April 14, 2026
+- Changed the GUI's colors
+- 
 ## Version 2.3.0 March 25, 2026
 - Added a GUI using Tkinter
 
