@@ -88,6 +88,7 @@ priority_menu.grid(row=1, column=1, pady=5, sticky="ew")
 
 btn_style = {"width": 15, "pady": 5}
 tk.Button(left_frame, text="ADD",
+          command=add,
           bg="#936046",
           fg="#E4E2D2",
           activebackground="#7a4f38",
@@ -95,6 +96,7 @@ tk.Button(left_frame, text="ADD",
           width=15, pady=5).grid(row=2, column=0, columnspan=2, pady=10)
 
 tk.Button(left_frame, text="REFRESH",
+          command=refresh,
           bg="#936046",
           fg="#E4E2D2",
           activebackground="#7a4f38",
@@ -102,6 +104,7 @@ tk.Button(left_frame, text="REFRESH",
           width=15, pady=5).grid(row=3, column=0, columnspan=2, pady=5)
 
 tk.Button(left_frame, text="COMPLETE",
+          command=complete,
           bg="#936046",
           fg="#E4E2D2",
           activebackground="#7a4f38",
